@@ -1,0 +1,14 @@
+def fc(n):
+        if n <= 0:
+                return []
+        elif n == 1:
+                return [1]
+        elif n == 2:
+                return [1, 1]
+        else:
+                fc1 = [1, 1]
+                while(len(fc1) < n):
+                        fc1.append(fc1[-1] + fc1[-2])
+                return fc1
+n = int(input("请输入你想循环的次数"))
+print(fc(n))
